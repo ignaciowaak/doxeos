@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perfiles THE DOX</title>
+<title>Perfiles FBI</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -16,28 +16,30 @@
     margin-bottom: 20px;
   }
   .header img {
-    width: 300px; /* Ajusta el tamaño del logo según lo desees */
+    width: 150px; /* Ajusta el tamaño del logo según lo desees */
     height: auto;
   }
+  .perfiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   .perfil {
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    display: inline-block;
-    width: 30%; /* Cada perfil ocupará el 30% del ancho del contenedor padre */
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
     box-sizing: border-box;
+    text-align: center;
   }
   .perfil img {
     width: 100%;
     height: auto;
-    border-radius: 1px;
+    border-radius: 5px;
     margin-bottom: 10px;
-    border: 2px solid #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
   }
   .nombre {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
     color: white;
@@ -51,28 +53,30 @@
 <body>
 
 <div class="header">
-  <img src="fotos-de-pelfiles/12.png" alt="Logo">
+  <img src="logoo/00.png" alt="Logo">
 </div>
 
-<div class="perfil" onclick="window.open('https://www.ejemplo.com', '_blank');">
-  <img src="fotos-de-pelfiles/Ivan.jpg" alt="Perfil 1">
-  <div class="nombre">Nombre 1</div>
-  <div class="descripcion">Descripción breve del perfil 1.</div>
-</div>
+<div class="perfiles">
+  <div class="perfil" onclick="window.open('pagina1.html', '_blank');">
+    <img src="fotos-de-pelfiles/Ivan.jpg" alt="Perfil 1">
+    <div class="nombre">Grabriel ivy</div>
+    <div class="descripcion">acosadorde redes sociales</div>
+  </div>
 
-<div class="perfil" onclick="window.open('https://www.ejemplo.com', '_blank');">
-  <img src="ruta/a/imagen2.jpg" alt="Perfil 2">
-  <div class="nombre">Nombre 2</div>
-  <div class="descripcion">Descripción breve del perfil 2.</div>
-</div>
+  <div class="perfil" onclick="window.open('pagina2.html', '_blank');">
+    <img src="fotos-de-pelfiles/Ivan.jpg" alt="Perfil 2">
+    <div class="nombre">Nombre 2</div>
+    <div class="descripcion">Descripción breve del perfil 2.</div>
+  </div>
 
-<div class="perfil" onclick="window.open('https://www.ejemplo.com', '_blank');">
-  <img src="ruta/a/imagen3.jpg" alt="Perfil 3">
-  <div class="nombre">Nombre 3</div>
-  <div class="descripcion">Descripción breve del perfil 3.</div>
-</div>
+  <div class="perfil" onclick="window.open('pagina3.html', '_blank');">
+    <img src="fotos-de-pelfiles/Ivan.jpg" alt="Perfil 3">
+    <div class="nombre">Nombre 3</div>
+    <div class="descripcion">Descripción breve del perfil 3.</div>
+  </div>
 
-<!-- Repite esta estructura para más perfiles -->
+  <!-- Repite esta estructura para más perfiles -->
+</div>
 
 </body>
 </html>
