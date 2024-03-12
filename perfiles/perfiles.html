@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfiles THE DOX</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #222C53;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .header img {
+    width: 300px; /* Ajusta el tamaño del logo según lo desees */
+    height: auto;
+  }
+  .perfil {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 30%; /* Cada perfil ocupará el 30% del ancho del contenedor padre */
+    box-sizing: border-box;
+  }
+  .perfil img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  .nombre {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+  }
+  .descripcion {
+    font-size: 14px;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="fotos-de-pelfiles/12.png" alt="Logo">
+</div>
+
+<div class="perfil" onclick="window.open('https://www.ejemplo.com', '_blank');">
+  <img src="fotos-de-pelfiles/Ivan.jpg" alt="Perfil 1">
+  <div class="nombre">Nombre 1</div>
+  <div class="descripcion">Descripción breve del perfil 1.</div>
+</div>
+
+<div class="perfil" onclick="window.open('https://www.ejemplo.com', '_blank');">
+  <img src="ruta/a/imagen2.jpg" alt="Perfil 2">
+  <div class="nombre">Nombre 2</div>
+  <div class="descripcion">Descripción breve del perfil 2.</div>
+</div>
+
+<div class="perfil" onclick="window.open('https://www.ejemplo.com', '_blank');">
+  <img src="ruta/a/imagen3.jpg" alt="Perfil 3">
+  <div class="nombre">Nombre 3</div>
+  <div class="descripcion">Descripción breve del perfil 3.</div>
+</div>
+
+<!-- Repite esta estructura para más perfiles -->
+
+</body>
+</html>
