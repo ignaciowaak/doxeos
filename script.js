@@ -126,7 +126,7 @@ tlClose.add("close")
   x: "-=80px", y: "+=80px", delay: 0.1, ease: Power4.easeOut
 }, "close");
 
-//EVENTS
+//EVENT
 openTrigger.on('click', function(){
   if(tlOpen.progress() < 1){
                 tlOpen.play();
