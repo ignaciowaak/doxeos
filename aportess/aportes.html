@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu página</title>
+<style>
+    /* Estilos CSS */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #222C53;
+    }
+    #formulario-container {
+      border: white solid 2px;
+        background-color: #222C53;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        width: 100%;
+    }
+    #logo {
+        display: block;
+        margin: 0 auto 20px;
+        width: 100px; /* Ajusta el tamaño según sea necesario */
+    }
+    #titulo {
+      color: white;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    #descripcion {
+      color: white;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    form {
+        text-align: center;
+    }
+    input, button, textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    button {
+      
+        background-color: #222C53;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <img id="logo" src="aoporteslogo.png" alt="Logo">
+
+    <div id="formulario-container">
+        <h1 id="titulo">Aportes Para doxear </h1>
+
+        <p id="descripcion">este apartado de sportes es oara que anónima memte ayudes a filtrar información de personas que atenten en contra de la prosperidad de la RepúblicaArgentina</p>
+
+        <form action="https://formsubmit.co/thedoxeos@gmail.com" method="POST">
+            <input type="text" name="aporte" placeholder="Aporte" required>
+            <input type="text" name="porque" placeholder="Por qué" required>
+            <textarea name="datos" placeholder="Datos para el doxeo (Escribe libremente y agrega líneas libremente)" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript para ocultar la imagen después de 4 segundos
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('imagen-inicial').style.display = 'none';
+            }, 4000);
+        };
+    </script>
+</body>
+</html>
