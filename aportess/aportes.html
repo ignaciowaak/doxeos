@@ -92,24 +92,17 @@
 
         <p id="descripcion">este apartado de soportes es para que anónimamemte ayudes a filtrar información de personas que atenten en contra de la prosperidad de la República Argentina</p>
 
-     <form action="https://formsubmit.co/aportesthedox@gmail.com" method="POST" enctype="multipart/form-data">
-       <input type="text" name="aporte" placeholder="Aporte" required>
-       <input type="text" name="porque" placeholder="Por qué" required>
-       <textarea name="datos" placeholder="Datos para el doxeo (Escribe libremente y agrega líneas libremente)" rows="5" required></textarea>
-       <label for="file-upload" class="custom-file-upload">
-         Aportar con pruebas 📷 <span id="image-count">0</span>
-       </label>
-       <input id="file-upload" type="file" name="imagen" accept="image/*" onchange="updateImageCount(this)">
-       <button type="submit" onclick="showPatienceMessage()">Enviar</button>
-     </form>
+<form action="https://formsubmit.co/aportesthedox@gmail.com" method="POST" enctype="multipart/form-data">
+  <input type="text" name="aporte" placeholder="Aporte" required>
+  <input type="text" name="porque" placeholder="Por qué" required>
+  <textarea name="datos" placeholder="Datos para el doxeo (Escribe libremente y agrega líneas libremente)" rows="5" required></textarea>
+  <label for="file-upload" class="custom-file-upload">
+    Aportar con pruebas 📷 <span id="image-count">0</span>
+  </label>
+  <input id="file-upload" type="file" name="imagen[]" accept="image/*" multiple onchange="handleImageSelection(event)">
+  <button type="submit" onclick="showPatienceMessage()">Enviar</button>
+</form>
     </div>
-
-<script>
-  // Función para mostrar un mensaje de paciencia al enviar el formulario
-  function showPatienceMessage() {
-    alert("Ten paciencia, suele tardar en cargar. Gracias.");
-  }
-</script>
 
 <script>
   // Lista para almacenar las imágenes seleccionadas
@@ -142,11 +135,6 @@
   function showPatienceMessage() {
     alert("Ten paciencia, suele tardar en cargar. Gracias.");
   }
-</script>
-
-<script>
-  // Seleccionar el input[type="file"] y añadir un evento onchange para manejar la selección de imágenes
-  document.getElementById('file-upload').onchange = handleImageSelection;
 </script>
 </body>
 </html>
