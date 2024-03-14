@@ -62,6 +62,23 @@
     button:hover {
         background-color: #0056b3;
     }
+      /* Estilos para el campo de entrada de tipo "file" */
+    input[type="file"] {
+        display: none;
+    }
+    .custom-file-upload {
+        display: inline-block;
+        background-color: #222C53;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    .custom-file-upload:hover {
+        background-color: #0056b3;
+    }
 </style>
 </head>
 <body>
@@ -72,12 +89,16 @@
 
         <p id="descripcion">este apartado de sportes es oara que anónima memte ayudes a filtrar información de personas que atenten en contra de la prosperidad de la RepúblicaArgentina</p>
 
-        <form action="https://formsubmit.co/aportesthedox@gmail.com" method="POST">
-            <input type="text" name="aporte" placeholder="Aporte" required>
-            <input type="text" name="porque" placeholder="Por qué" required>
-            <textarea name="datos" placeholder="Datos para el doxeo (Escribe libremente y agrega líneas libremente)" rows="5" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+     <form action="https://formsubmit.co/aportesthedox@gmail.com" method="POST" enctype="multipart/form-data">
+       <input type="text" name="aporte" placeholder="Aporte" required>
+       <input type="text" name="porque" placeholder="Por qué" required>
+       <textarea name="datos" placeholder="Datos para el doxeo (Escribe libremente y agrega líneas libremente)" rows="5" required></textarea>
+       <label for="file-upload" class="custom-file-upload">
+         Aportar con pruebas 📷
+       </label>
+       <input id="file-upload" type="file" name="imagen" accept="image/*">
+       <button type="submit">Enviar</button>
+     </form>
     </div>
 
     <script>
