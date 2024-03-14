@@ -90,51 +90,38 @@
     <div id="formulario-container">
         <h1 id="titulo">Aportes Para doxear </h1>
 
-        <p id="descripcion">este apartado de soportes es para que anónimamemte ayudes a filtrar información de personas que atenten en contra de la prosperidad de la República Argentina</p>
+        <p id="descripcion">este apartado de soportes es para que anónimamemte ayudes a filtrar información de personas que atenten en contra de la prosperidad de la RepúblicaArgentina</p>
 
-<form action="https://formsubmit.co/aportesthedox@gmail.com" method="POST" enctype="multipart/form-data">
-  <input type="text" name="aporte" placeholder="Aporte" required>
-  <input type="text" name="porque" placeholder="Por qué" required>
-  <textarea name="datos" placeholder="Datos para el doxeo (Escribe libremente y agrega líneas libremente)" rows="5" required></textarea>
-  <label for="file-upload" class="custom-file-upload">
-    Aportar con pruebas 📷 <span id="image-count">0</span>
-  </label>
-  <input id="file-upload" type="file" name="imagen[]" accept="image/*" multiple onchange="handleImageSelection(event)">
-  <button type="submit" onclick="showPatienceMessage()">Enviar</button>
-</form>
+     <form action="https://formsubmit.co/aportesthedox@gmail.com" method="POST" enctype="multipart/form-data">
+       <input type="text" name="aporte" placeholder="Aporte" required>
+       <input type="text" name="porque" placeholder="Por qué" required>
+       <textarea name="datos" placeholder="Datos para el doxeo (Escribe libremente y agrega líneas libremente)" rows="5" required></textarea>
+       <label for="file-upload" class="custom-file-upload">
+         Aportar con pruebas 📷 <span id="image-count">0</span>
+       </label>
+       <input id="file-upload" type="file" name="imagen" accept="image/*" onchange="updateImageCount(this)">
+       <button type="submit" onclick="showPatienceMessage()">Enviar</button>
+     </form>
     </div>
 
-<script>
-  // Lista para almacenar las imágenes seleccionadas
-  var selectedImages = [];
-
-  // Función para manejar la selección de imágenes
-  function handleImageSelection(event) {
-    var input = event.target;
-    var files = input.files;
-
-    for (var i = 0; i < files.length; i++) {
-      var file = files[i];
-
-      // Verificar si la imagen ya está seleccionada
-      var alreadySelected = selectedImages.some(function(img) {
-        return img.name === file.name && img.size === file.size && img.type === file.type;
-      });
-
-      if (!alreadySelected) {
-        // Agregar la imagen a la lista de imágenes seleccionadas
-        selectedImages.push(file);
-      }
-    }
-
-    // Actualizar el contador de imágenes seleccionadas
-    document.getElementById('image-count').textContent = selectedImages.length;
-  }
-
-  // Función para mostrar un mensaje de paciencia al enviar el formulario
-  function showPatienceMessage() {
-    alert("Ten paciencia, suele tardar en cargar. Gracias.");
-  }
-</script>
+    <script>
+        // JavaScript para ocultar la imagen después de 4 segundos
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('imagen-inicial').style.display = 'none';
+            }, 4000);
+        };
+        
+        // Función para actualizar el contador de imágenes seleccionadas
+        function updateImageCount(input) {
+            var count = input.files ? input.files.length : 0;
+            document.getElementById('image-count').textContent = count;
+        }
+        
+        // Función para mostrar un mensaje de paciencia al enviar el formulario
+        function showPatienceMessage() {
+            alert("Ten paciencia, suele tardar en cargar. Gracias.");
+        }
+    </script>
 </body>
 </html>
